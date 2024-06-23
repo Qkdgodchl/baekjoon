@@ -9,11 +9,11 @@ using namespace std ;
 
 int main()
 {
-    string s ;
-    cin >> s;
-    list<char> l ;
+    string s ; 
+    cin >> s ; // 문자열 선언과 입력
+    list<char> l ; //연결 리스트 선언
 
-    for(auto i : s ) l.push_back(i) ;
+    for(auto i : s ) l.push_back(i) ; //연결 리스트에 문자열 원소 넣어주기
     auto cursor = l.end() ;
 
     int n ;
@@ -39,7 +39,7 @@ int main()
         else if(p == 'B'){
             if(cursor != l.begin()){
                 cursor -- ;
-                cursor = l.erase(cursor) ;
+                cursor = l.erase(cursor) ; // erase 함수는 커서가 가리키는 곳을 지우고 그 다음 값을 반환함 그래서 cursor 에다가 다시 넣어줘야함
                
             }
         }
